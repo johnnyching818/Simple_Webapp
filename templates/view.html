@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Awesome Messages{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <p> Here's an awesome quote:</p>
+  <ul>
+    {% for message in messages %}
+      <li>{{ message[1] }}: {{ message[2] }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
